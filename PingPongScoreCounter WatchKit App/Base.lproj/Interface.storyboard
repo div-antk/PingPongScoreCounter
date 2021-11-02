@@ -29,25 +29,40 @@
                                     <color key="backgroundColor" red="0.93333333330000001" green="0.46666666670000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="48"/>
                                     <connections>
-                                        <action selector="alphaScoreButton" destination="AgC-eL-Hgc" id="H2Q-l8-Kem"/>
+                                        <action selector="alphaScoreButtonAction" destination="AgC-eL-Hgc" id="9BO-HV-EVV"/>
                                     </connections>
                                 </button>
                                 <button width="0.5" height="1" alignment="right" title="0" id="CWU-lV-CPV">
                                     <color key="backgroundColor" red="0.1176470588" green="0.15686274510000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="48"/>
                                     <connections>
-                                        <action selector="betaScoreButton" destination="AgC-eL-Hgc" id="pp5-xm-O2R"/>
+                                        <action selector="betaScoreButtonAction" destination="AgC-eL-Hgc" id="1w4-gH-eit"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
                         <group width="1" height="30" alignment="left" id="pyc-RX-GIK">
                             <items>
-                                <button width="0.5" height="1" alignment="left" title="💣" id="3gE-Ea-Ptd"/>
-                                <button width="0.5" height="1" alignment="left" title="↩️" id="diw-cX-5Ax"/>
+                                <button width="0.5" height="1" alignment="left" title="💣" id="3gE-Ea-Ptd">
+                                    <connections>
+                                        <action selector="eraserButton" destination="AgC-eL-Hgc" id="aYv-Cq-kBj"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" title="↩️" id="diw-cX-5Ax">
+                                    <connections>
+                                        <action selector="undoButton" destination="AgC-eL-Hgc" id="BUk-q9-C41"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="alphaPoint" destination="Ahg-Ol-ckw" id="fC3-iS-OLs"/>
+                        <outlet property="alphaScoreButton" destination="j1F-En-TC7" id="hev-kv-XaJ"/>
+                        <outlet property="betaPoint" destination="8eS-y1-O56" id="iWc-jr-N2G"/>
+                        <outlet property="betaScoreButton" destination="CWU-lV-CPV" id="iE7-7I-pV1"/>
+                        <outlet property="matchStatusLabel" destination="Qv4-Uk-VWG" id="ctH-yV-f3C"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="340"/>

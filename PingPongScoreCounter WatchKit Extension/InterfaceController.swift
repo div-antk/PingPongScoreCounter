@@ -11,8 +11,16 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var matchStatusLabel: WKInterfaceLabel!
+    @IBOutlet weak var alphaPoint: WKInterfaceLabel!
+    @IBOutlet weak var betaPoint: WKInterfaceLabel!
+    @IBOutlet weak var alphaScoreButton: WKInterfaceButton!
+    @IBOutlet weak var betaScoreButton: WKInterfaceButton!
+    
+    var alphaScore: Int = 0
+    var betaScore: Int = 0
+    
     override func awake(withContext context: Any?) {
-        // Configure interface objects here.
     }
     
     override func willActivate() {
@@ -23,4 +31,21 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
     }
 
+
+    @IBAction func alphaScoreButtonAction() {
+        alphaScore += 1
+        alphaScoreButton.setTitle(String(alphaScore))
+    }
+    
+    @IBAction func betaScoreButtonAction() {
+        betaScore += 1
+        betaScoreButton.setTitle(String(betaScore))
+    }
+    
+    @IBAction func eraserButton() {
+    }
+    
+    @IBAction func undoButton() {
+    }
+    
 }
