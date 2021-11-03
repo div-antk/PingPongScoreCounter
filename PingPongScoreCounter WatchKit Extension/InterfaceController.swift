@@ -31,15 +31,16 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
     }
 
-
     @IBAction func alphaScoreButtonAction() {
         alphaScore += 1
         alphaScoreButton.setTitle(String(alphaScore))
+        statusHandler()
     }
     
     @IBAction func betaScoreButtonAction() {
         betaScore += 1
         betaScoreButton.setTitle(String(betaScore))
+        statusHandler()
     }
     
     @IBAction func eraserButton() {
@@ -47,5 +48,14 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func undoButton() {
     }
-    
+   
+    private func statusHandler() {
+        // デュース判定
+        if alphaScore == 10 && betaScore == 10 {
+            matchStatusLabel.setText("Deuce!🔥")
+            matchStatusLabel.setTextColor(UIColor.red)
+            alphaScoreButton.setBackgroundColor(UIColor.brown)
+            betaScoreButton.setBackgroundColor(UIColor.purple)
+        }
+    }
 }
