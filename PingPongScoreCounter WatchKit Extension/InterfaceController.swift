@@ -12,13 +12,16 @@ import Foundation
 class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var matchStatusLabel: WKInterfaceLabel!
-    @IBOutlet weak var alphaPoint: WKInterfaceLabel!
-    @IBOutlet weak var betaPoint: WKInterfaceLabel!
+    @IBOutlet weak var alphaPointLabel: WKInterfaceLabel!
+    @IBOutlet weak var betaPointLabel: WKInterfaceLabel!
     @IBOutlet weak var alphaScoreButton: WKInterfaceButton!
     @IBOutlet weak var betaScoreButton: WKInterfaceButton!
     
     var alphaScore: Int = 0
     var betaScore: Int = 0
+    
+    var alphaPoint: Int = 0
+    var betaPoint: Int = 0
     
     override func awake(withContext context: Any?) {
     }
@@ -50,12 +53,22 @@ class InterfaceController: WKInterfaceController {
     }
    
     private func statusHandler() {
+
+        // 点差の絶対値
+        let diff: Int = abs(alphaScore - betaScore)
+
         // デュース判定
         if alphaScore == 10 && betaScore == 10 {
             matchStatusLabel.setText("Deuce!🔥")
             matchStatusLabel.setTextColor(UIColor.red)
             alphaScoreButton.setBackgroundColor(UIColor.brown)
             betaScoreButton.setBackgroundColor(UIColor.purple)
+        } else if alphaScore > 10 && diff == 2 {
+            alphaPoint += 1
+            alphaPointLabel.setText(String(alphaPoint))
+        } else if betaScore > 10 && diff == 2 {
+            betaPoint += 1
+            betaPointLabel.setText(String(betaPoint))
         }
     }
 }
