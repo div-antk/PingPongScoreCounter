@@ -24,6 +24,7 @@ class InterfaceController: WKInterfaceController {
     var betaPoint: Int = 0
     
     override func awake(withContext context: Any?) {
+        resetScore()
     }
     
     override func willActivate() {
@@ -66,9 +67,26 @@ class InterfaceController: WKInterfaceController {
         } else if alphaScore > 10 && diff == 2 {
             alphaPoint += 1
             alphaPointLabel.setText(String(alphaPoint))
+            resetScore()
+            
         } else if betaScore > 10 && diff == 2 {
             betaPoint += 1
             betaPointLabel.setText(String(betaPoint))
+            resetScore()
         }
+    }
+    
+    private func resetScore() {
+        
+        matchStatusLabel.setText("🏓")
+        
+        alphaScore = 0
+        alphaScoreButton.setTitle(String(alphaScore))
+        
+        betaScore = 0
+        betaScoreButton.setTitle(String(betaScore))
+        
+        alphaScoreButton.setBackgroundColor(.orange)
+        betaScoreButton.setBackgroundColor(.blue)        
     }
 }
