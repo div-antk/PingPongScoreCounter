@@ -23,6 +23,8 @@ class InterfaceController: WKInterfaceController {
     var alphaPoint: Int = 0
     var betaPoint: Int = 0
     
+    var isDuece = false
+    
     override func awake(withContext context: Any?) {
         resetScore()
     }
@@ -57,27 +59,42 @@ class InterfaceController: WKInterfaceController {
 
         // 点差の絶対値
         let diff: Int = abs(alphaScore - betaScore)
-
+                
         // デュース判定
-        if alphaScore == 10 && betaScore == 10 {
+        if alphaScore >= 10 && betaScore >= 10 && diff == 0 {
             matchStatusLabel.setText("Deuce!🔥")
-            matchStatusLabel.setTextColor(UIColor.red)
             alphaScoreButton.setBackgroundColor(UIColor.brown)
             betaScoreButton.setBackgroundColor(UIColor.purple)
-        } else if alphaScore > 10 && diff == 2 {
-            alphaPoint += 1
-            alphaPointLabel.setText(String(alphaPoint))
-            resetScore()
+            isDuece = true
             
-        } else if betaScore > 10 && diff == 2 {
-            betaPoint += 1
-            betaPointLabel.setText(String(betaPoint))
-            resetScore()
+        } else if alphaScore > betaScore && diff == 2 && isDuece {
+            alphaWin()
+        } else if betaScore > alphaScore && diff == 2 && isDuece {
+            betaWin()
+        } else if alphaScore == 11 && !isDuece {
+            alphaWin()
+        } else if betaScore == 11 && !isDuece {
+            betaWin()
+        } else if alphaScore == 10 && !isDuece || betaScore == 10 && !isDuece || isDuece && diff == 1 {
+            matchStatusLabel.setText("Match Point!💥")
         }
+    }
+    
+    private func alphaWin() {
+        alphaPoint += 1
+        alphaPointLabel.setText(String(alphaPoint))
+        resetScore()
+    }
+    
+    private func betaWin() {
+        betaPoint += 1
+        betaPointLabel.setText(String(betaPoint))
+        resetScore()
     }
     
     private func resetScore() {
         
+        isDuece = false
         matchStatusLabel.setText("🏓")
         
         alphaScore = 0
@@ -87,6 +104,6 @@ class InterfaceController: WKInterfaceController {
         betaScoreButton.setTitle(String(betaScore))
         
         alphaScoreButton.setBackgroundColor(.orange)
-        betaScoreButton.setBackgroundColor(.blue)        
+        betaScoreButton.setBackgroundColor(.blue)
     }
 }
