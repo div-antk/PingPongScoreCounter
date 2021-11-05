@@ -50,6 +50,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func eraserButton() {
+        resetAll()
     }
     
     @IBAction func undoButton() {
@@ -105,5 +106,17 @@ class InterfaceController: WKInterfaceController {
         
         alphaScoreButton.setBackgroundColor(.orange)
         betaScoreButton.setBackgroundColor(.blue)
+    }
+    
+    private func resetAll() {
+        
+        resetScore()
+        
+        alphaPoint = 0
+        alphaPointLabel
+            .setText(String(alphaPoint))
+        
+        betaPoint = 0
+        betaPointLabel.setText(String(betaPoint))
     }
 }
