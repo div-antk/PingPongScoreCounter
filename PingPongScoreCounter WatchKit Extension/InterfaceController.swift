@@ -8,7 +8,6 @@
 import WatchKit
 import Foundation
 
-
 class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var matchStatusLabel: WKInterfaceLabel!
@@ -54,6 +53,12 @@ class InterfaceController: WKInterfaceController {
             alphaScore -= 1
             alphaScoreButton.setTitle(String(alphaScore))
             statusHandler()
+            
+            if alphaScore < 10 && betaScore == 10 {
+                isDuece = false
+                alphaScoreButton.setBackgroundColor(.orange)
+                betaScoreButton.setBackgroundColor(.blue)
+            }
         }
     }
     
@@ -62,6 +67,12 @@ class InterfaceController: WKInterfaceController {
             betaScore -= 1
             betaScoreButton.setTitle(String(betaScore))
             statusHandler()
+            
+            if betaScore < 10 && alphaScore == 10 {
+                isDuece = false
+                alphaScoreButton.setBackgroundColor(.orange)
+                betaScoreButton.setBackgroundColor(.blue)
+            }
         }
     }
     
@@ -70,10 +81,10 @@ class InterfaceController: WKInterfaceController {
     }
    
     private func statusHandler() {
-
+                
         // 点差の絶対値
         let diff: Int = abs(alphaScore - betaScore)
-                
+        
         // デュース判定
         if alphaScore >= 10 && betaScore >= 10 && diff == 0 {
             matchStatusLabel.setText("Deuce!🔥")
