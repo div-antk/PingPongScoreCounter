@@ -49,11 +49,24 @@ class InterfaceController: WKInterfaceController {
         statusHandler()
     }
     
-    @IBAction func eraserButton() {
-        resetAll()
+    @IBAction func alphaMinusButtonAction() {
+        if alphaScore > 0 {
+            alphaScore -= 1
+            alphaScoreButton.setTitle(String(alphaScore))
+            statusHandler()
+        }
     }
     
-    @IBAction func undoButton() {
+    @IBAction func betaMinusButtonAction() {
+        if betaScore > 0 {
+            betaScore -= 1
+            betaScoreButton.setTitle(String(betaScore))
+            statusHandler()
+        }
+    }
+    
+    @IBAction func eraserButton() {
+        resetAll()
     }
    
     private func statusHandler() {
@@ -78,6 +91,8 @@ class InterfaceController: WKInterfaceController {
             betaWin()
         } else if alphaScore == 10 && !isDuece || betaScore == 10 && !isDuece || isDuece && diff == 1 {
             matchStatusLabel.setText("Match Point!💥")
+        } else {
+            matchStatusLabel.setText("🏓")
         }
     }
     
