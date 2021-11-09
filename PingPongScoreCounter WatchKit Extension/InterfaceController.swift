@@ -32,16 +32,19 @@ class InterfaceController: WKInterfaceController {
         alphaScore += 1
         alphaScoreButton.setTitle(String(alphaScore))
         statusHandler()
+        WKInterfaceDevice.current().play(.directionUp)
     }
     
     @IBAction func betaScoreButtonAction() {
         betaScore += 1
         betaScoreButton.setTitle(String(betaScore))
         statusHandler()
+        WKInterfaceDevice.current().play(.directionUp)
     }
     
     @IBAction func alphaMinusButtonAction() {
         if alphaScore > 0 {
+            WKInterfaceDevice.current().play(.directionDown)
             alphaScore -= 1
             alphaScoreButton.setTitle(String(alphaScore))
             statusHandler()
@@ -56,6 +59,7 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func betaMinusButtonAction() {
         if betaScore > 0 {
+            WKInterfaceDevice.current().play(.directionDown)
             betaScore -= 1
             betaScoreButton.setTitle(String(betaScore))
             statusHandler()
@@ -69,6 +73,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func eraserButton() {
+        WKInterfaceDevice.current().play(.failure)
         resetAll()
     }
    
