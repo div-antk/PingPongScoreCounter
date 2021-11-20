@@ -18,14 +18,14 @@
                         <group width="0.69999999999999996" height="0.20000000000000001" alignment="center" id="KVg-6Q-Y0F">
                             <items>
                                 <label width="0.45000000000000001" height="1" alignment="center" text="0" textAlignment="center" id="Ahg-Ol-ckw">
-                                    <color key="textColor" red="0.95411711929999998" green="0.54454076289999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" red="0.91764705882352937" green="0.46666666666666667" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="18"/>
                                 </label>
                                 <label width="0.10000000000000001" height="1" alignment="center" text="-" textAlignment="center" id="FL4-0L-Fxi">
                                     <fontDescription key="font" type="system" pointSize="18"/>
                                 </label>
                                 <label width="0.45000000000000001" height="1" alignment="center" text="0" textAlignment="center" id="8eS-y1-O56">
-                                    <color key="textColor" red="0.1176470588" green="0.15686274510000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.0" green="0.31764705882352939" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="18"/>
                                 </label>
                             </items>
@@ -33,14 +33,14 @@
                         <group width="1" height="0.80000000000000004" alignment="left" id="KkE-8I-XNf">
                             <items>
                                 <button width="0.5" height="1" alignment="left" title="0" id="j1F-En-TC7">
-                                    <color key="backgroundColor" red="0.93333333330000001" green="0.46666666670000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.91764705882352937" green="0.46666666666666667" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="48"/>
                                     <connections>
                                         <action selector="alphaScoreButtonAction" destination="AgC-eL-Hgc" id="9BO-HV-EVV"/>
                                     </connections>
                                 </button>
                                 <button width="0.5" height="1" alignment="right" title="0" id="CWU-lV-CPV">
-                                    <color key="backgroundColor" red="0.1176470588" green="0.15686274510000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.31764705882352939" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="48"/>
                                     <connections>
                                         <action selector="betaScoreButtonAction" destination="AgC-eL-Hgc" id="1w4-gH-eit"/>
@@ -51,7 +51,7 @@
                         <group width="1" height="30" alignment="left" id="pyc-RX-GIK">
                             <items>
                                 <button width="0.40000000000000002" height="1" alignment="left" title="-1" id="pAD-r1-rH1">
-                                    <color key="backgroundColor" red="0.93333333330000001" green="0.46666666670000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.91764705882352937" green="0.46666666666666667" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="medium" pointSize="15"/>
                                     <connections>
                                         <action selector="alphaMinusButtonAction" destination="AgC-eL-Hgc" id="6kf-bH-2mi"/>
@@ -64,7 +64,7 @@
                                     </connections>
                                 </button>
                                 <button width="0.40000000000000002" height="1" alignment="right" title="-1" id="bNw-bO-FC4">
-                                    <color key="backgroundColor" red="0.1176470588" green="0.15686274510000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.31764705882352939" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
                                     <connections>
                                         <action selector="betaMinusButtonAction" destination="AgC-eL-Hgc" id="z7a-c6-L3F"/>

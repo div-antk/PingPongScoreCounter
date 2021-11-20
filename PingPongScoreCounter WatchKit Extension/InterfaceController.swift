@@ -7,6 +7,7 @@
 
 import WatchKit
 import Foundation
+import UIKit
 
 class InterfaceController: WKInterfaceController {
 
@@ -51,8 +52,8 @@ class InterfaceController: WKInterfaceController {
             
             if alphaScore < 10 && betaScore == 10 {
                 isDuece = false
-                alphaScoreButton.setBackgroundColor(.orange)
-                betaScoreButton.setBackgroundColor(.blue)
+                alphaScoreButton.setBackgroundColor(.brunaRed)
+                betaScoreButton.setBackgroundColor(.brunaBlue)
             }
         }
     }
@@ -66,8 +67,8 @@ class InterfaceController: WKInterfaceController {
             
             if betaScore < 10 && alphaScore == 10 {
                 isDuece = false
-                alphaScoreButton.setBackgroundColor(.orange)
-                betaScoreButton.setBackgroundColor(.blue)
+                alphaScoreButton.setBackgroundColor(.brunaRed)
+                betaScoreButton.setBackgroundColor(.brunaBlue)
             }
         }
     }
@@ -85,8 +86,8 @@ class InterfaceController: WKInterfaceController {
         // デュース判定
         if alphaScore >= 10 && betaScore >= 10 && diff == 0 {
             matchStatusLabel.setText("Deuce!🔥")
-            alphaScoreButton.setBackgroundColor(UIColor.brown)
-            betaScoreButton.setBackgroundColor(UIColor.purple)
+            alphaScoreButton.setBackgroundColor(.deuceRed)
+            betaScoreButton.setBackgroundColor(.deuceBlue)
             isDuece = true
             
         } else if alphaScore > betaScore && diff == 2 && isDuece {
@@ -127,8 +128,8 @@ class InterfaceController: WKInterfaceController {
         betaScore = 0
         betaScoreButton.setTitle(String(betaScore))
         
-        alphaScoreButton.setBackgroundColor(.orange)
-        betaScoreButton.setBackgroundColor(.blue)
+        alphaScoreButton.setBackgroundColor(.brunaRed)
+        betaScoreButton.setBackgroundColor(.brunaBlue)
     }
     
     private func resetAll() {
@@ -142,4 +143,13 @@ class InterfaceController: WKInterfaceController {
         betaPoint = 0
         betaPointLabel.setText(String(betaPoint))
     }
+}
+
+extension UIColor {
+    static let brunaRed = UIColor(red: 234/255, green: 84/255, blue: 21/255, alpha: 1)
+    static let brunaBlue = UIColor(red: 0/255, green: 81/255, blue: 146/255, alpha: 1)
+    
+    static let deuceRed = UIColor(red: 234/255, green: 84/255, blue: 21/255, alpha: 0.5)
+    static let deuceBlue = UIColor(red: 0/255, green: 81/255, blue: 146/255, alpha: 0.5)
+
 }
