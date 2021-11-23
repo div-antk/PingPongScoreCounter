@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BD35791274A58D600E6828A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1EE41272FDE10001AAC29 /* ExtensionDelegate.swift */; };
 		3BF1EE2D272FDE0A001AAC29 /* PingPongScoreCounter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3BF1EE2C272FDE0A001AAC29 /* PingPongScoreCounter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BF1EE33272FDE0A001AAC29 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF1EE31272FDE0A001AAC29 /* Interface.storyboard */; };
 		3BF1EE35272FDE0F001AAC29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF1EE34272FDE0F001AAC29 /* Assets.xcassets */; };
 		3BF1EE3B272FDE10001AAC29 /* PingPongScoreCounter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BF1EE3A272FDE10001AAC29 /* PingPongScoreCounter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BF1EE40272FDE10001AAC29 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1EE3F272FDE10001AAC29 /* InterfaceController.swift */; };
-		3BF1EE42272FDE10001AAC29 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1EE41272FDE10001AAC29 /* ExtensionDelegate.swift */; };
 		3BF1EE44272FDE10001AAC29 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1EE43272FDE10001AAC29 /* NotificationController.swift */; };
 		3BF1EE46272FDE10001AAC29 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1EE45272FDE10001AAC29 /* ComplicationController.swift */; };
 		3BF1EE48272FDE12001AAC29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF1EE47272FDE12001AAC29 /* Assets.xcassets */; };
@@ -118,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				3BF1EE3F272FDE10001AAC29 /* InterfaceController.swift */,
-				3BF1EE41272FDE10001AAC29 /* ExtensionDelegate.swift */,
 				3BF1EE43272FDE10001AAC29 /* NotificationController.swift */,
+				3BF1EE41272FDE10001AAC29 /* ExtensionDelegate.swift */,
 				3BF1EE45272FDE10001AAC29 /* ComplicationController.swift */,
 				3BF1EE47272FDE12001AAC29 /* Assets.xcassets */,
 				3BF1EE49272FDE12001AAC29 /* Info.plist */,
@@ -257,7 +257,7 @@
 			files = (
 				3BF1EE44272FDE10001AAC29 /* NotificationController.swift in Sources */,
 				3BF1EE46272FDE10001AAC29 /* ComplicationController.swift in Sources */,
-				3BF1EE42272FDE10001AAC29 /* ExtensionDelegate.swift in Sources */,
+				3BD35791274A58D600E6828A /* ExtensionDelegate.swift in Sources */,
 				3BF1EE40272FDE10001AAC29 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,8 +526,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antk.PingPongScoreCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -541,8 +541,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antk.PingPongScoreCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
