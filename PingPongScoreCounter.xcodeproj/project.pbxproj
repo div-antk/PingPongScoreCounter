@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BD35791274A58D600E6828A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1EE41272FDE10001AAC29 /* ExtensionDelegate.swift */; };
-		3BF1EE2D272FDE0A001AAC29 /* PingPongScoreCounter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3BF1EE2C272FDE0A001AAC29 /* PingPongScoreCounter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BF1EE2D272FDE0A001AAC29 /* Table Tennis Counter.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3BF1EE2C272FDE0A001AAC29 /* Table Tennis Counter.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BF1EE33272FDE0A001AAC29 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF1EE31272FDE0A001AAC29 /* Interface.storyboard */; };
 		3BF1EE35272FDE0F001AAC29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF1EE34272FDE0F001AAC29 /* Assets.xcassets */; };
 		3BF1EE3B272FDE10001AAC29 /* PingPongScoreCounter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BF1EE3A272FDE10001AAC29 /* PingPongScoreCounter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -53,7 +53,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				3BF1EE2D272FDE0A001AAC29 /* PingPongScoreCounter WatchKit App.app in Embed Watch Content */,
+				3BF1EE2D272FDE0A001AAC29 /* Table Tennis Counter.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +62,7 @@
 
 /* Begin PBXFileReference section */
 		3BF1EE28272FDE0A001AAC29 /* PingPongScoreCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingPongScoreCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BF1EE2C272FDE0A001AAC29 /* PingPongScoreCounter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PingPongScoreCounter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF1EE2C272FDE0A001AAC29 /* Table Tennis Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table Tennis Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF1EE32272FDE0A001AAC29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		3BF1EE34272FDE0F001AAC29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BF1EE3A272FDE10001AAC29 /* PingPongScoreCounter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PingPongScoreCounter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				3BF1EE28272FDE0A001AAC29 /* PingPongScoreCounter.app */,
-				3BF1EE2C272FDE0A001AAC29 /* PingPongScoreCounter WatchKit App.app */,
+				3BF1EE2C272FDE0A001AAC29 /* Table Tennis Counter.app */,
 				3BF1EE3A272FDE10001AAC29 /* PingPongScoreCounter WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -162,7 +162,7 @@
 			);
 			name = "PingPongScoreCounter WatchKit App";
 			productName = "PingPongScoreCounter WatchKit App";
-			productReference = 3BF1EE2C272FDE0A001AAC29 /* PingPongScoreCounter WatchKit App.app */;
+			productReference = 3BF1EE2C272FDE0A001AAC29 /* Table Tennis Counter.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		3BF1EE39272FDE10001AAC29 /* PingPongScoreCounter WatchKit Extension */ = {
@@ -473,16 +473,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZS6GWM7ZN;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = PingPongScoreCounter_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "PingPongScoreCounter WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antk.PingPongScoreCounter.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Table Tennis Counter";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -498,16 +498,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZS6GWM7ZN;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = PingPongScoreCounter_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "PingPongScoreCounter WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.antk.PingPongScoreCounter.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Table Tennis Counter";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
