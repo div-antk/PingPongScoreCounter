@@ -9,7 +9,7 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PingPongScoreCounter_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Table_Tennis_Counter" customModuleProvider="target">
                     <items>
                         <label width="1" height="0.10000000000000001" alignment="center" text="🏓" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="Qv4-Uk-VWG">
                             <color key="textColor" red="0.93333333330000001" green="0.46666666670000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -19,14 +19,14 @@
                             <items>
                                 <label width="0.45000000000000001" height="1" alignment="center" text="0" textAlignment="center" id="Ahg-Ol-ckw">
                                     <color key="textColor" red="0.91764705882352937" green="0.46666666666666667" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="24"/>
                                 </label>
                                 <label width="0.10000000000000001" height="1" alignment="center" text="-" textAlignment="center" id="FL4-0L-Fxi">
                                     <fontDescription key="font" type="system" pointSize="18"/>
                                 </label>
                                 <label width="0.45000000000000001" height="1" alignment="center" text="0" textAlignment="center" id="8eS-y1-O56">
                                     <color key="textColor" red="0.0" green="0.31764705882352939" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="24"/>
                                 </label>
                             </items>
                         </group>
@@ -104,14 +104,14 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="PingPongScoreCounter_WatchKit_App" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Table_Tennis_Counter" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="PingPongScoreCounter_WatchKit_App" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Table_Tennis_Counter" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="710" y="643"/>
         </scene>
