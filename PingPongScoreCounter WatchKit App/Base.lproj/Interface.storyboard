@@ -11,9 +11,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Table_Tennis_Counter" customModuleProvider="target">
                     <items>
-                        <label width="1" height="0.10000000000000001" alignment="center" text="🏓" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="Qv4-Uk-VWG">
+                        <label width="1" height="0.14999999999999999" alignment="center" text="🏓" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="Qv4-Uk-VWG">
                             <color key="textColor" red="0.93333333330000001" green="0.46666666670000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="22"/>
                         </label>
                         <group width="0.69999999999999996" height="0.20000000000000001" alignment="center" id="KVg-6Q-Y0F">
                             <items>
