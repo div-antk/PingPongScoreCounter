@@ -17,7 +17,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             CLKComplicationDescriptor(
                 identifier: "complication",
                 displayName: "Table Tennis Counter",
-                supportedFamilies: [CLKComplicationFamily.graphicCircular]
+                supportedFamilies: [CLKComplicationFamily.circularSmall]
             )
             // Multiple complication support can be added here with more descriptors
         ]
